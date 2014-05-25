@@ -10,7 +10,7 @@ This is a class project that requires merging two data sets and extracting vario
 The two data sets represent training and test sets of wearable computer observations.  The files were obtained from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 ## ACCOMPANYING DOCUMENTS:
-* README.md (this doucument) - A brief explanation of the project, related documents, procedures and selection criteria for variables to study
+* README.md (this document) - A brief explanation of the project, related documents, procedures and selection criteria for variables to study
 * run_analysis.R - Code required to duplicate the study.  It includes greater detail for each step taken.
 * code_book.md - Details the meaning of each data set and their variables
 
