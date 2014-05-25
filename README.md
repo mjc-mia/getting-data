@@ -1,7 +1,7 @@
 getting-data
 ============
 
-Getting and Cleaning Data project
+Getting and Cleaning Data project 
 
 ## PURPOSE:  
 This is a class project that requires merging two data sets and extracting various metrics from the merged sets.
