@@ -94,7 +94,7 @@ names(summarydata2)[1]="activity"
 names(summarydata2)[2]="subjectid"
 
 # write out finished file
-write.csv(summarydata2, "summary-dataset.csv")
+write.table(summarydata2, "summary-dataset.txt", sep="\t", row.names=F)
 
 
 
