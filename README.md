@@ -20,8 +20,20 @@ The first task in the assignment was to obtain and combine the two data sets.  A
 
 Carrying out this task created a data frame called "combineddata."  The actions required are detailed in steps 1-4 in run_analysis.R
 
+The only significant observation in this part is that the extraction of the compressed files was done manually.  A note in the run_analysis.R file indicates it could have been done with unz() function, but that would only be justified as part of the automated extract/transform/load process in a production environment.  For one-time use, it makes more sense to do it manually.
+
 ### Extracting Relevant Measurements
-The next task was to extract the mean and standard deviation observations for each measurement.
+The next task was to extract the mean and standard deviation observations for each measurement.  The computers generated 17 different signals that were measured.  These measurements represented changed reported by the acceleromenter and gyroscope in the computer, and included such things as body acceleration in 3-D space.  From these signals, the researchers created 17 metrics for each measurment, including mean, median, standard deviation, and many others. For most of these metrics, there were three observations representing each of the Z, Y, and Z axes.  Further, there were raw observations (prefix "t"), and filtered, transformed measurements (prefix "f").  In all, 561 measurements were recorded for each subject and activity.
 
+Only mean and standard deviation were included in the assignment. To do this, I selected all elements of the feature list (features.txt) that included "means" or "std" in the description.  I then used those lists with the subset() function to create a new data frame with only those columns.
 
+This task was done in step 5 in run_analysis.R  
 
+### Use descriptive activity names
+The data frame created in the first task has a column for the activity  id.  To complete this task, we have to add another column with the activity description.  The activity description is in a separate file called activity_labels.txt.  We read the file into a data frame and complete the task by using the merge() function to combine the two data frames.
+
+This task was done in step 6 in run_analysis.R  
+
+The final data set is called "final" and will be uploaded with the name of "final-dataset.txt"
+
+## Create separate data frame with only averages for each subject/activity combination
