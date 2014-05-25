@@ -36,7 +36,7 @@ This task was done in step 6 in run_analysis.R
 
 The final data set is called "final" and will be uploaded with the name of "final-dataset.txt"
 
-## Create separate data frame with only averages for each subject/activity combination
+### Create separate data frame with only averages for each subject/activity combination
 
 The desired output is one row per user-activity combination.  We use the aggregate() function
 for this and output the data frame under the name "summarydata.csv."
