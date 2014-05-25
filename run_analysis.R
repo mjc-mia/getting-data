@@ -83,6 +83,18 @@ names(final)[1]="activitycode"
 # 6c Write out finished file
 write.csv(final, "final-dataset.csv")
 
+#7 Create separate data frame with means by activity and subject for all measurements
+
+summarydata=aggregate(final, by=list(final$activityname, final$subjectid), FUN=mean, rm.na=T)
+
+# the aggregate() function duplicates the grouping columns, so drop the original 
+# activity and subject columns and rename the aggregate columns
+summarydata2 <- subset(summarydata, select = -c(activityname,subjectid) )
+names(summarydata2)[1]="activity" 
+names(summarydata2)[2]="subjectid"
+
+# write out finished file
+write.csv(summarydata2, "summary-dataset.csv")
 
 
 
